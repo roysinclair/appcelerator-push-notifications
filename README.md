@@ -27,7 +27,10 @@ Open app/alloy.js
  
 Set var ENV = "live or local";
 
-Set Alloy.Globals.WEBAPP set the website URI to load 
+Set Alloy.Globals.PUSHSERVICE to the API URI location 
+
+### Android users
+For more information or additional help with the ti.goosh module see: https://github.com/caffeinalab/ti.goosh  
 
 ### Prerequisites
 
