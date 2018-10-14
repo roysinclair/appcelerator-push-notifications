@@ -1,0 +1,7 @@
+<Alloy>
+	<Window class="container" layout="horizontal">
+		<Label id="label" onClick="iosActivatePush" height="50" top="40" width="100%" textAlign="center">Register iOS device</Label>
+		<Label id="label" onClick="registerAndroid" height="50" width="100%" textAlign="center">Register Android device</Label>
+		<Label id="label" onClick="postUnRegisterDeviceToken" height="50" width="100%" textAlign="center">Remove device</Label>
+	</Window>
+</Alloy>

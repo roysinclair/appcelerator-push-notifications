@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.demopush.roysinclair</id>
+    <name>demo-push</name>
+    <version>1.0</version>
+    <publisher>roysinclair</publisher>
+    <url>http://semtex.co.za</url>
+    <description/>
+    <copyright>2018 by roysinclair</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>d805919b-5611-4983-9333-a6631eb4950b</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="run-on-main-thread" type="bool">true</property>
+    <property name="gcm.senderid">YOUR_SENDER_ID</property>
+    <ios>
+        <enable-launch-screen-storyboard>false</enable-launch-screen-storyboard>
+        <use-app-thinning>true</use-app-thinning>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                </array>
+                <!-- START: ENCRPT KEY FALSE -->
+                <key>ITSAppUsesNonExemptEncryption</key>
+                <false/>
+                <!-- END: ENCRPT KEY FALSE -->
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>NSAppTransportSecurity</key>
+                <dict>
+                    <key>NSAllowsArbitraryLoads</key>
+                    <true/>
+                    <key>NSAllowsArbitraryLoadsInWebContent</key>
+                    <true/>
+                </dict>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest android:versionCode="1">
+            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26"/>
+            <application android:debuggable="true"/>
+            <application android:hardwareAccelerated="true"
+                android:largeHeap="true" android:theme="@style/Theme.AppCompat.NoTitleBar.Fullscreen"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <application>
+                <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+            </application>
+        </manifest>
+    </android>
+    <modules>
+        <module platform="android" version="4.1.0">ti.goosh</module>
+    </modules>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+    </deployment-targets>
+    <sdk-version>7.4.0.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+    <property name="appc-app-id" type="string">5bc1cdcabc12a537d6223072</property>
+</ti:app>
